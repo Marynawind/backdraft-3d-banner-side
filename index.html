@@ -73,20 +73,19 @@
   @media (prefers-reduced-motion: reduce) { .hint svg { animation: none; } }
 
   @media (max-width: 860px) {
-    /* phone, side-by-side variant: text on the left, the model on the right, everything scales with the width */
-    .hero { grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); align-items: center; min-height: 0; }
-    .copy { padding: 12vw 0 8vw 4.2vw; pointer-events: none; } .copy a { pointer-events: auto; }
-    .lockup { left: 4.2vw; top: 5vw; width: 30vw; margin-bottom: 4vw !important; }
-    h1 { font-size: 11.2vw; }
-    .lede { margin-top: 3.4vw; font-size: 3.1vw; line-height: 1.35; max-width: none; }
-    .sizes { grid-template-columns: 1fr; gap: 1.6vw; margin-top: 4vw; max-width: none; }
-    .sizes li { display: flex; align-items: center; gap: 2.4vw; padding: 1.8vw 2.4vw; border-radius: 1.6vw; }
-    .len { font-size: 6.6vw; flex: none; }
-    .what { margin: 0; font-size: 2.45vw; letter-spacing: .08em; }
-    .cta { margin-top: 4.6vw; }
+    /* phone, side-by-side variant: text on the left half, the model on the right half, everything scales with the width */
+    .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; min-height: 0; }
+    .copy { padding: 6vw 1.5vw 6vw 4.2vw; pointer-events: none; } .copy a { pointer-events: auto; }
+    h1 { font-size: 9.2vw; }
+    .lede { margin-top: 3vw; font-size: 3vw; line-height: 1.35; max-width: none; }
+    .sizes { grid-template-columns: 1fr; gap: 1.6vw; margin-top: 3.6vw; max-width: none; }
+    .sizes li { display: flex; align-items: center; gap: 2vw; padding: 1.7vw 2.2vw; border-radius: 1.6vw; }
+    .len { font-size: 6.2vw; flex: none; }
+    .what { margin: 0; font-size: 2.35vw; letter-spacing: .06em; }
+    .cta { margin-top: 4.2vw; }
     .btn { min-height: 9.6vw; padding: 0 4.6vw; font-size: 3.3vw; border-radius: 1.4vw; }
-    .stage { height: 128vw; min-height: 0; margin-left: -6vw; margin-right: -4vw; z-index: 1; }   /* wider canvas under the text edge: bigger model */
-    .hint { bottom: 5vw; padding: 1.6vw 2.6vw 1.6vw 2vw; gap: 1.6vw; font-size: 2.4vw; }
+    .stage { height: auto; min-height: 0; z-index: 1; }   /* same height as the text column */
+    .hint { bottom: 6vw; padding: 1.6vw 2.6vw 1.6vw 2vw; gap: 1.6vw; font-size: 2.4vw; }   /* level with the button */
     .hint svg { width: 4.4vw; height: 4.4vw; }
   }
 </style>
